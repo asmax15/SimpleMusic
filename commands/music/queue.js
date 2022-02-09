@@ -9,9 +9,9 @@ module.exports = {
     execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
-        if (!queue) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
+        if (!queue) return message.channel.send(`No music currently playing ${message.author}... try again? Operation failed!`);
 
-        if (!queue.tracks[0]) return message.channel.send(`No music in the queue after the current one ${message.author}... try again ? ❌`);
+        if (!queue.tracks[0]) return message.channel.send(`No music in the queue after the current one ${message.author}... try again? Operation failed!`);
 
         const embed = new MessageEmbed();
         const methods = ['', '🔁', '🔂'];
